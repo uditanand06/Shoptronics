@@ -1,16 +1,30 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply !scrollbar-thin  !scrollbar-track-transparent !scrollbar-thumb-blue-500
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+@layer components{
+    .glass_effect{
+        @apply bg-base-200 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  border border-gray-100
+    }
+    .glass-component{
+        @apply bg-white bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10
+    }
+    .error_text{
+        @apply  tracking-wide text-error text-xs pt-1
+    }
+    .btn-custom{
+        @apply btn btn-primary bg-gradient-to-r from-primary to-secondary
+    }
+    .text-h1{
+        @apply text-3xl sm:text-5xl font-bold text-center w-full
+    }
+    .text-product{
+        @apply text-base md:text-lg font-normal text-info
+    }
 }

@@ -1,0 +1,142 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  accounts      Account[]
+  sessions      Session[]
+  orders        Order[]
+  // walletAddress String?
+  // bannerImage   String?
+  // twitterHandle String?
+  // igHandle      String?
+  // itemsCreated  MarketItem[] @relation("User Created")
+  // itemsOwned    MarketItem[] @relation("User Owns",fields:[itemOwnedIds],references: [id])
+  // itemOwnedIds  String[] @db.ObjectId
+
+
+
+}
+
+model Order {
+  id              String          @id @default(auto()) @map("_id") @db.ObjectId
+  user            User  @relation(fields:[userId],references: [id])
+  userId          String   
+  orderItems      OrderItem[]
+  shippingAddress ShippingAddress?
+
+  paymentMethod String
+  paymentResult  String?  
+  itemsPrice     Float     
+  shippingPrice  Float    
+  taxPrice       Float     
+  totalPrice     Float     
+  isPaid         Boolean @default(false)
+  isDelivered    Boolean  @default(false)
+  paidAt         DateTime  @default(now())    
+  deliveredAt    DateTime?
+
+
+}
+
+model OrderItem {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  orderId  String @db.ObjectId
+  order    Order  @relation(fields: [orderId], references: [id])
+  name     String
+  quantity Int
+  image    String
+  price    Float
+
+}
+
+model ShippingAddress {
+  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  fullName   String
+  address    String
+  city       String
+  postalCode String
+  country    String
+  order      Order  @relation(fields: [orderId], references: [id])
+  orderId    String @db.ObjectId @unique
+}
+
+model Product {
+  id           String  @id @default(auto()) @map("_id") @db.ObjectId
+  name         String?
+  slug         String
+  category     String
+  imageUrl     String?
+  price        Int
+  brand        String
+  rating       Float?
+  numReviews   Int?
+  countInstock Int?
+  description  String?
+}
+
+// model MarketItem{
+//   id              String  @id @default(auto()) @map("_id") @db.ObjectId
+//   title           String?
+//   contractAddress String?
+//   description     String?
+//   volumeTraded    Int?
+//   floorPrice      Int?
+//   author          User @relation("User Created",fields: [authorId], references: [id])
+//   authorId        String     @db.ObjectId
+//   owners          User[] @relation("User Owns",fields:[ownerIds], references: [id])
+//   ownerIds        String[] @db.ObjectId
+//   profileImage    String?
+//   bannerImage     String?
+
+// }
+
+model VerificationToken {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
