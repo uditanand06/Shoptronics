@@ -37,11 +37,11 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 -Technologies Used:Nextjs,Prisma,MongoDb,Next-Auth,TailwindCSS
 
-##SignUp
+## SignUp
 
 ![image](https://user-images.githubusercontent.com/56317420/176986969-021b26dc-e601-46fc-ba6e-9a80063a6779.png)
 
-##Login
+## Login
 
 ![image](https://user-images.githubusercontent.com/56317420/176986992-6145c175-8c7c-4d84-b978-9082187ef8a8.png)
 
@@ -52,23 +52,23 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ![image](https://user-images.githubusercontent.com/56317420/176987030-4319bb5b-e203-4040-8c97-ec44eb9aa237.png)
 ![image](https://user-images.githubusercontent.com/56317420/176987331-61b2f32c-b02f-4fa7-b70e-dc928765374d.png)
 
-##Product Page
+## Product Page
 
 ![image](https://user-images.githubusercontent.com/56317420/176987390-70e3ef91-059b-4d7e-9666-040ed4ec461b.png)
 ![image](https://user-images.githubusercontent.com/56317420/176987400-df10e9f3-dcf7-493b-988a-979d51022d21.png)
 
-##Cart
+## Cart
 
 ![image](https://user-images.githubusercontent.com/56317420/176987436-ac71ce20-ff60-479e-a812-f7affd7973db.png)
 
-##Shipping
+## Shipping
 
 ![image](https://user-images.githubusercontent.com/56317420/176987443-f0ebf4ef-d76c-40be-a529-fe208cf893e7.png)
 
-##Payment
+## Payment
 
 ![image](https://user-images.githubusercontent.com/56317420/176987453-ed738954-a14f-442c-9922-90767177b90b.png)
 
-##Place Order
+## Place Order
 
 ![image](https://user-images.githubusercontent.com/56317420/176987462-dad7c1b1-add5-455d-9757-1aceca488b74.png)
