@@ -38,7 +38,7 @@ const Navbar = () => {
     <div className="navbar bg-base-300 fixed z-30">
         <div className="flex-1">
             <Link href='/'>
-                <a className="btn btn-primary btn-ghost normal-case text-xl">NFT</a>
+                <a className="btn btn-primary btn-ghost normal-case text-xl">Shoptronics</a>
             </Link>
         </div>
         <div className="flex-none space-x-5">
