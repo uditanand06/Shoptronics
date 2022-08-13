@@ -27,7 +27,7 @@ const TopCollectibles = ({products}) => {
             </div>
         </div> */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-y-20'>
-            {products?.map((product) => (<ProductCard product={product} id={product.id} />))}
+            {products?.map((product) => (<ProductCard product={product} key={product.id} />))}
         </div>
     </div>
     
