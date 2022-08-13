@@ -8,7 +8,7 @@ const Card = ({product}) => {
   return (
     <div className="card h-[80vh] w-[25rem] bg-base-300 shadow-xl">
         <div className='h-3/5 relative'>
-            <Image src={product.ImageUrl} objectFit='cover'  layout="fill"  className='absolute'/>
+            <Image src={product.ImageUrl} objectFit='cover'  layout="fill"  className='absolute' alt=""/>
             <div className='absolute bg-gradient-to-r from-primary to-secondary flex space-x-1 rounded-full p-3 text-white top-2 left-2'>
                 <BadgeCheckIcon className='h-6 w-6'/>
                 <div>Total Sale:</div>

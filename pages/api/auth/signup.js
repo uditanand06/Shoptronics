@@ -37,7 +37,7 @@ async function handler(req, res) {
 
   const hashedPassword = bcrypt.hashSync(password, '$2a$10$CwTycUXWue0Thq9StjUM0u');
 
-  const result = await prisma.user.create({
+  await prisma.user.create({
     data:{
         email,
         name,
@@ -48,5 +48,6 @@ async function handler(req, res) {
   res.status(201).json({ message: 'Created user!' });
   
 }
+
 
 export default handler;

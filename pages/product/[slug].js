@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Layout from '../../components/layout'
 import { API_URL } from '../../config';
 import Image from 'next/image';

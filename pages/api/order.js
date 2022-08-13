@@ -11,7 +11,7 @@ export default async(req,res) => {
                     return res.status(200).json(order)
                 }
 
-            }
+            }break
 
             case 'POST':{
                 const { orderItems,
@@ -39,7 +39,7 @@ export default async(req,res) => {
                     const order = updateisPaid(req.query.id,isPaid)
                     return res.status(200).json(order)
                 }  
-            }
+            }break
 
             // case 'DELETE':{
                 

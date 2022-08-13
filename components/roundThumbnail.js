@@ -12,7 +12,7 @@ function RoundThumbnail() {
     <div className="card card-compact min-w-[220px] min-h-[220px] bg-base-300 space-y-4 py-6">
         <div className='avatar mx-auto'>
             <div className='w-44 rounded-full'>
-                <Image src='/images/pants1.jpg' width={200} height={200} />
+                <Image src='/images/pants1.jpg' width={200} height={200} alt=""/>
             </div>
         </div>
         <div className='mx-auto space-x-2'>
