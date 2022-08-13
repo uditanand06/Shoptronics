@@ -8,16 +8,16 @@ const NewsLetter = () => {
         <div class="form-control text-center container mx-auto">
             <label class="input-group flex justify-center">
                 <span><button>Subscribe</button></span>
-                <input type="text" placeholder="info@site.com" class="input input-bordered" />
+                <input type="text" placeholder="info@site.com" className="input input-bordered" />
             </label>
         </div>
         <div className='text-white text-center'>
             After reading the <span className='text-primary'>Privacy Notice</span>, you may subscribe for our newsletter to get special offers and occasional surveys delivered to your inbox. Unsubscribe at any time by clicking on the link in the email.
         </div>
-        <div class="form-control grid place-items-center">
-            <label class="label cursor-pointer space-x-2">
-                <span class="label-text text-white">By entering my email and subscribing I confirm and agree to the above.</span> 
-                <input type="checkbox" class="checkbox checkbox-secondary border-white" />
+        <div className="form-control grid place-items-center">
+            <label className="label cursor-pointer space-x-2">
+                <span className="label-text text-white">By entering my email and subscribing I confirm and agree to the above.</span> 
+                <input type="checkbox" className="checkbox checkbox-secondary border-white" />
             </label>
         </div>
     </div>

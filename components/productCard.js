@@ -12,7 +12,7 @@ const ProductCard = ({product}) => {
     
 
     return (
-        <div class="card h-[80vh] w-[25rem] bg-base-300 shadow-xl">
+        <div className="card h-[80vh] w-[25rem] bg-base-300 shadow-xl">
             <div className='h-3/5 relative'>
                 <Link href={`/product/${product.slug}`}><a><Image src={product.imageUrl} objectFit='cover'  layout="fill"  className='absolute'/></a></Link>
                 <div className='absolute bg-gradient-to-r from-primary to-secondary flex space-x-1 rounded-full p-3 text-white top-2 left-2'>
@@ -26,7 +26,7 @@ const ProductCard = ({product}) => {
                     }
                 </div>
             </div>
-            <div class="card-body flex flex-col justify-between">
+            <div className="card-body flex flex-col justify-between">
                 <div className='space-y-2'>
                     <h2 class="card-title">{product.brand}</h2>
                     <div className='card-title'>
@@ -40,7 +40,7 @@ const ProductCard = ({product}) => {
                 </div>
                 
                 
-                <div class="card-actions justify-between">
+                <div className="card-actions justify-between">
                     <button className='flex space-x-1'>
                         <HeartIcon className='h-10 w-10 text-white'/>
                     </button>

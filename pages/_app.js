@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 import { SessionProvider } from "next-auth/react"
 import { AuthContextProvider } from '../context/AuthContext'
-import Router, { useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import LoadingPage from '../components/loading'
 import { useEffect, useState } from 'react'
 import { StoreProvider } from '../context/StoreContext'

@@ -54,11 +54,11 @@ const ShippingPage = () => {
     <Layout title='shipping'>
         <div className='h-screen pt-28 px-10'>
             <div>
-                <ul class="steps steps-vertical sm:steps-horizontal w-full">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Shipping Address</li>
-                    <li class="step">Payment</li>
-                    <li class="step">Place Order</li>
+                <ul className="steps steps-vertical sm:steps-horizontal w-full">
+                    <li className="step step-primary">Register</li>
+                    <li className="step step-primary">Shipping Address</li>
+                    <li className="step">Payment</li>
+                    <li className="step">Place Order</li>
                 </ul>
             </div>
             <div>

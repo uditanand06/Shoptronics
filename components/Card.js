@@ -22,7 +22,7 @@ const Card = ({product}) => {
                 <div className='card-title '>{product.Price}</div>
                 <div className='flex space-x-2 '>
                     <div class="avatar">
-                        <div class="w-10 rounded-full">
+                        <div className="w-10 rounded-full">
                             <img src={product.Avatar} />
                         </div>
                     </div>
@@ -31,12 +31,12 @@ const Card = ({product}) => {
             </div>
             
             
-            <div class="card-actions justify-between">
+            <div className="card-actions justify-between">
                 <button className='flex space-x-1'>
                     <HeartIcon className='h-10 w-10 text-white'/>
                     <span className='p-2'>{product.Likes}</span>
                 </button>
-                <button class="btn btn-primary">Buy Now</button>
+                <button className="btn btn-primary">Buy Now</button>
             </div>
         </div>
     </div>
