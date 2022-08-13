@@ -14,8 +14,8 @@ import { useRouter } from "next/router";
 
 const Login = () => {
   const router = useRouter()
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
-  const { login,user } = useAuth()
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { login } = useAuth()
   const onSubmit = async ({email,password}) => {
     try {
       await login(email,password)

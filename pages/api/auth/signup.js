@@ -1,7 +1,7 @@
 import prisma from '../../../prisma/prisma'
 import bcrypt from 'bcryptjs';
 
-const salt = bcrypt.genSaltSync(10)
+// const salt = bcrypt.genSaltSync(10)
 
 async function handler(req, res) {
   if (req.method !== 'POST') {

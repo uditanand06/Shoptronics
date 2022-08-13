@@ -105,7 +105,7 @@ const ProductPage = ({product}) => {
 export default ProductPage
 
 export async function getServerSideProps({query:{slug}}){
-    const res = await fetch(`http://localhost:3000/api/product?slug=${slug}`)
+    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/product?slug=${slug}`)
     const product = await res.json();
     return{
         props:{
