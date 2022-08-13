@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import StripeCheckout from 'react-stripe-checkout'
 import Layout from '../../components/layout'
+import { API_URL } from '../../config'
 
 
 const OrderPage = ({order:{shippingAddress,paymentMethod,orderItems:cartItems,itemsPrice,taxPrice,shippingPrice,totalPrice,id,isDeleivered,isPaid}}) => {
@@ -169,7 +170,7 @@ const OrderPage = ({order:{shippingAddress,paymentMethod,orderItems:cartItems,it
 export default OrderPage
 
 export async function getServerSideProps({query:{id}}){
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/order?id=${id}`);
+  const res = await fetch(`${API_URL}/order?id=${id}`);
   const order = await res.json();
   return{
     props:{

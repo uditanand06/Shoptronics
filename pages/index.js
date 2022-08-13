@@ -3,6 +3,7 @@ import Hero from "../components/hero/hero";
 import Layout from "../components/layout";
 import NewsLetter from "../components/newsletter/newsletter";
 import TopCollectibles from "../components/topCollectibles/topCollectibles";
+import { API_URL } from "../config";
 
 
 
@@ -21,7 +22,7 @@ export default function Home({products}) {
 
 
 export async function getServerSideProps(){
-  const res=await fetch('http://localhost:3000/api/product');
+  const res=await fetch(`${API_URL}/product`);
   const products = await res.json()
   return{
       props:{

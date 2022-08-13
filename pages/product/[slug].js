@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Layout from '../../components/layout'
-import {useRouter} from 'next/router'
+import { API_URL } from '../../config';
 import Image from 'next/image';
 import { CurrencyRupeeIcon } from '@heroicons/react/solid';
 import Link from 'next/link';
@@ -105,7 +105,7 @@ const ProductPage = ({product}) => {
 export default ProductPage
 
 export async function getServerSideProps({query:{slug}}){
-    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/product?slug=${slug}`)
+    const res = await fetch(`${API_URL}/product?slug=${slug}`)
     const product = await res.json();
     return{
         props:{
