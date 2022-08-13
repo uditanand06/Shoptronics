@@ -9,11 +9,9 @@ export default async(req,res) => {
                 {
                     const order=await getUniqueOrder(req.query.id)
                     return res.status(200).json(order)
-                }else{
-                     
                 }
 
-            }break;
+            }
 
             case 'POST':{
                 const { orderItems,
@@ -31,7 +29,7 @@ export default async(req,res) => {
                     taxPrice,
                     totalPrice,session)
                 return res.status(200).json(Order)
-            }break;
+            }
 
             case 'PUT':{
                 if(req.query.id)
@@ -40,11 +38,8 @@ export default async(req,res) => {
                     const {isPaid} = req.body
                     const order = updateisPaid(req.query.id,isPaid)
                     return res.status(200).json(order)
-                }else{
-
-                }
-                
-            }break;
+                }  
+            }
 
             // case 'DELETE':{
                 

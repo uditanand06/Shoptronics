@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { Store } from '../context/StoreContext'
 import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
-import axios from 'axios';
 
 const AddButton = ({product}) => {
     var stock

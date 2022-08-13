@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from 'react'
 import Layout from '../components/layout'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useForm } from "react-hook-form";
-import Link from 'next/link'
+
 import { useRouter } from 'next/router';
 import { Store } from '../context/StoreContext';
 import Cookies from 'js-cookie';
@@ -11,9 +11,9 @@ import { useSession } from 'next-auth/react';
 import {  getSession } from "next-auth/react"
 
 const ShippingPage = () => {
-    const {data:session} = useSession()
+    //const {data:session} = useSession()
     const router = useRouter()
-    const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
+    const { register, handleSubmit, formState: { errors }, setValue } = useForm();
     const { state, dispatch } = useContext(Store);
     const { cart } = state;
     const { shippingAddress } = cart;

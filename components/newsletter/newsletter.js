@@ -5,8 +5,8 @@ const NewsLetter = () => {
     <div className='w-screen  bg-gradient-to-r from-fuchsia-600 to-pink-600 p-10 flex-col justify-center items-center space-y-5 '>
         <div className='text-white text-3xl sm:text-5xl font-bold text-center'>Never miss a drop</div>
         <div className='text-white text-xl sm:text-3xl font-bold text-center'>Subscribe for the latest news, drops & collectibles</div>
-        <div class="form-control text-center container mx-auto">
-            <label class="input-group flex justify-center">
+        <div className="form-control text-center container mx-auto">
+            <label className="input-group flex justify-center">
                 <span><button>Subscribe</button></span>
                 <input type="text" placeholder="info@site.com" className="input input-bordered" />
             </label>
