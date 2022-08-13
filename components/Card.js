@@ -6,7 +6,7 @@ import React from 'react'
 const Card = ({product}) => {
 
   return (
-    <div class="card h-[80vh] w-[25rem] bg-base-300 shadow-xl">
+    <div className="card h-[80vh] w-[25rem] bg-base-300 shadow-xl">
         <div className='h-3/5 relative'>
             <Image src={product.ImageUrl} objectFit='cover'  layout="fill"  className='absolute'/>
             <div className='absolute bg-gradient-to-r from-primary to-secondary flex space-x-1 rounded-full p-3 text-white top-2 left-2'>
@@ -16,7 +16,7 @@ const Card = ({product}) => {
                 <div>{product.Badge}</div>
             </div>
         </div>
-        <div class="card-body flex flex-col justify-between">
+        <div className="card-body flex flex-col justify-between">
             <div className='space-y-2'>
                 <h2 class="card-title">{product.Title}</h2>
                 <div className='card-title '>{product.Price}</div>

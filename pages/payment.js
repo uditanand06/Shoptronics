@@ -45,11 +45,11 @@ const PaymentScreen = () => {
     <Layout title='payment'>
         <div className='h-screen pt-28 px-10'>
             <div>
-                <ul class="steps steps-vertical sm:steps-horizontal w-full">
-                    <li class="step step-primary">Register</li>
-                    <li class="step step-primary">Shipping Address</li>
-                    <li class="step step-primary">Payment</li>
-                    <li class="step">Place Order</li>
+                <ul className="steps steps-vertical sm:steps-horizontal w-full">
+                    <li className="step step-primary">Register</li>
+                    <li className="step step-primary">Shipping Address</li>
+                    <li className="step step-primary">Payment</li>
+                    <li className="step">Place Order</li>
                 </ul>
             </div>
             <form className="mx-auto max-w-screen-md mt-20 form-control" onSubmit={submitHandler}>
