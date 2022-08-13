@@ -9,7 +9,7 @@ import {BadgeCheckIcon, CurrencyRupeeIcon} from '@heroicons/react/solid'
 function RoundThumbnail() {
   
   return (
-    <div class="card card-compact min-w-[220px] min-h-[220px] bg-base-300 space-y-4 py-6">
+    <div className="card card-compact min-w-[220px] min-h-[220px] bg-base-300 space-y-4 py-6">
         <div className='avatar mx-auto'>
             <div className='w-44 rounded-full'>
                 <Image src='/images/pants1.jpg' width={200} height={200} />

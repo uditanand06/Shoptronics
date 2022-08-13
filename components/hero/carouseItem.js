@@ -34,7 +34,7 @@ const CarouselItem = ({item}) => {
 
       // </div>
 
-      <div class={`carousel-item ${item.Id===1 && 'active'} float-left w-full`}>
+      <div className={`carousel-item ${item.Id===1 && 'active'} float-left w-full`}>
           <Image src={item.ImageSrc} layout="fill" objectFit='cover' className='brightness-50 block w-full'/>
           <div className='absolute w-full  text-center space-y-4 top-10 md:top-[9rem] lg:top-16'>
             <button className='btn-custom rounded-3xl space-x-2'>

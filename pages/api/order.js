@@ -13,7 +13,7 @@ export default async(req,res) => {
                      
                 }
 
-            }
+            }break;
 
             case 'POST':{
                 const { orderItems,
@@ -31,7 +31,7 @@ export default async(req,res) => {
                     taxPrice,
                     totalPrice,session)
                 return res.status(200).json(Order)
-            }
+            }break;
 
             case 'PUT':{
                 if(req.query.id)
@@ -44,11 +44,11 @@ export default async(req,res) => {
 
                 }
                 
-            }
+            }break;
 
-            case 'DELETE':{
+            // case 'DELETE':{
                 
-            }
+            // }
                 
         }
     }catch(error){

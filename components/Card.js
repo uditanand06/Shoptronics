@@ -18,10 +18,10 @@ const Card = ({product}) => {
         </div>
         <div className="card-body flex flex-col justify-between">
             <div className='space-y-2'>
-                <h2 class="card-title">{product.Title}</h2>
+                <h2 className="card-title">{product.Title}</h2>
                 <div className='card-title '>{product.Price}</div>
                 <div className='flex space-x-2 '>
-                    <div class="avatar">
+                    <div className="avatar">
                         <div className="w-10 rounded-full">
                             <img src={product.Avatar} />
                         </div>

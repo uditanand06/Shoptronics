@@ -28,7 +28,7 @@ const ProductCard = ({product}) => {
             </div>
             <div className="card-body flex flex-col justify-between">
                 <div className='space-y-2'>
-                    <h2 class="card-title">{product.brand}</h2>
+                    <h2 className="card-title">{product.brand}</h2>
                     <div className='card-title'>
                         <CurrencyRupeeIcon className='w-6 h-6'/>
                         <div>{product.price}</div>
