@@ -12,6 +12,7 @@
     "@heroicons/react": "^1.0.6",
     "@next-auth/prisma-adapter": "^1.0.3",
     "@prisma/client": "^4.0.0",
+    "@stripe/stripe-js": "^1.32.0",
     "axios": "^0.27.2",
     "bcryptjs": "^2.4.3",
     "daisyui": "^2.15.4",
@@ -22,10 +23,13 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.32.2",
+    "react-stripe-checkout": "^2.6.3",
     "react-toastify": "^9.0.5",
+    "stripe": "^9.11.0",
     "tailwind-scrollbar-hide": "^1.1.7",
     "theme-change": "^2.0.2",
-    "tw-elements": "^1.0.0-alpha12"
+    "tw-elements": "^1.0.0-alpha12",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

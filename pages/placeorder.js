@@ -62,7 +62,7 @@ const PlaceOrder = () => {
           cartItems: [],
         })
       );
-      router.push(`/order/${data._id}`);
+      router.push(`/order/${data.id}`);
     } catch (err) {
       setLoading(false);
       toast.error(getError(err));

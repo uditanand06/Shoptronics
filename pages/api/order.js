@@ -1,11 +1,18 @@
-import {createOrder} from '../../prisma/order'
+import {createOrder, getUniqueOrder, updateisPaid} from '../../prisma/order'
 
 export default async(req,res) => {
     try{
         switch(req.method)
         {
             case 'GET':{
-                
+                if(req.query.id)
+                {
+                    const order=await getUniqueOrder(req.query.id)
+                    return res.status(200).json(order)
+                }else{
+                     
+                }
+
             }
 
             case 'POST':{
@@ -27,6 +34,15 @@ export default async(req,res) => {
             }
 
             case 'PUT':{
+                if(req.query.id)
+                {
+                    //console.log('hi')
+                    const {isPaid} = req.body
+                    const order = updateisPaid(req.query.id,isPaid)
+                    return res.status(200).json(order)
+                }else{
+
+                }
                 
             }
 

@@ -54,7 +54,7 @@ export const createOrder = async(orderItems,
     })
 
     orderItems?.map(async function(item){
-        console.log('hi')
+        
         await prisma.orderItem.create({
             data:{
                 order:{
@@ -75,9 +75,37 @@ export const createOrder = async(orderItems,
 }
 
 export const getUniqueOrder = async(id) => {
-    const order = prisma.order.findUnique({
-        where:{id}
+    const order = await prisma.order.findUnique({
+        where:{id},
+        include:{
+            shippingAddress:true,
+            orderItems:true,
+        },
     })
 
     return order
 }
+
+export const getOrder = async () => {
+    const orders = await prisma.order.findMany({})
+    return orders;
+}
+
+export const getUserOrder = async (userId) => {
+    const orders = await prisma.order.findMany({
+        where:{userId}
+    })
+    return orders
+}
+
+export const updateisPaid = async (id,isPaid) => {
+    const order = prisma.order.update({
+        where:{id},
+        data:{
+            isPaid:isPaid,
+        }
+    })
+    return order
+}
+
+
