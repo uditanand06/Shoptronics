@@ -3,11 +3,12 @@ import React from 'react'
 import {CalendarIcon} from '@heroicons/react/outline'
 
 const CarouselItem = ({item}) => {
-
-    // if(item.Id===1) prev=3;
-    // else prev=item.Id-1;
-    // if(item.Id===3) next=1;
-    // else next=item.Id+1;
+    var prev
+    if(item.Id===1) prev=3;
+    else prev=item.Id-1;
+    var next
+    if(item.Id===3) next=1;
+    else next=item.Id+1;
   return (
    
       // <div id={`slide${item.Id}`} class="carousel-item relative w-full">

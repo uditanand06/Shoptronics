@@ -65,7 +65,7 @@ const Carousel = () => {
         </div>
         <div className="carousel-inner relative w-full overflow-hidden">
           {Items.map((item) => (
-                    <CarouselItem key={item.Id} id={item.Id} item={item} />
+                    <CarouselItem id={item.Id} item={item} />
                 ))}
         </div>
         <button

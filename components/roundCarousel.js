@@ -1,13 +1,13 @@
-
+import { ArrowCircleDownIcon } from '@heroicons/react/outline'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
 
 import { useRef, useState } from 'react'
 import RoundThumbnail from './roundThumbnail'
 
 
-function RoundCarousel() {
+function RoundCarousel({ title, movies }) {
   const rowRef = useRef(null)
-  const [ isMoved,setIsMoved] = useState(false)
+  const [isMoved, setIsMoved] = useState(false)
 
   const handleClick = (direction) => {
     setIsMoved(true)

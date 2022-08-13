@@ -8,10 +8,10 @@ import { useAuth } from '../context/AuthContext';
 
 
 const RegisterSide = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const { signup } = useAuth()
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { user,signup } = useAuth()
     const router = useRouter()
-    const onSubmit = async ({email,password,confirmPassword}) => {
+    const onSubmit = async ({name,email,password,confirmPassword}) => {
         if(password!==confirmPassword)
         {
             toast.error("Invalid Confirm Password");

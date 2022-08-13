@@ -29,11 +29,11 @@ const Login = () => {
       <ToastContainer />
       <div className="h-screen flex justify-center items-center ">
         <div className="absolute top-0 left-0 w-full h-full -z-10 ">
-          <Image src='/wallpaper2.jpg' layout="fill" objectFit="cover" alt="" />
+          <Image src='/wallpaper2.jpg' layout="fill" objectFit="cover"  />
         </div>
         <div className="mt-[100px] mb-[20px] md:m-auto flex md:w-3/4 md:h-3/4 p-4 glass_effect">
             <div className="w-full hidden md:flex  bg-[#B253F7] rounded-xl p-2">
-              <Image src='/login.svg' height={600} width={500}  alt="" />
+              <Image src='/login.svg' height={600} width={500}  />
             </div>
             <div className="w-full">
               <div className='px-10 py-6 rounded-xl h-full w-full '>
@@ -46,7 +46,7 @@ const Login = () => {
                   
                   <button onClick={() => signIn('google')} className="h-12 px-6 border border-blue-100 rounded-lg bg-blue-50 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-200">
                     <div className="flex items-center space-x-4 justify-center">
-                        <img src="/google.svg" className="w-8" alt="logo"/>
+                        <img src="/google.svg" className="w-8" alt=""/>
                         <span className="block w-max font-medium tracking-wide text-sm text-blue-700">with  Google</span>
                     </div>
                   </button>
